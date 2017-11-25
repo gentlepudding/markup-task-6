@@ -2,32 +2,77 @@ body
 {
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     color: #000;
     height: 100%;
 
     --side-margin: 100px;
-    font-size: 14px;
+}
+
+/* Common styles */
+
+.block-name
+{
+    color: #1e90ff;
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.block-name:hover,
+.list > li:hover,
+.header__options:hover,
+.stock__rates:hover,
+.menu__item:hover,
+.joke__category:hover
+{
+    color: #dc143c;
+}
+
+.list
+{
+    padding: 0;
+    margin: 0;
+    line-height: 1.9;
+    list-style: none;
+    cursor: pointer;
+}
+
+.bold-text
+{
+    font-weight: bold;
+}
+
+.light-text
+{
+    color: #a9a9a9;
 }
 
 /* Header */
 
 .header
 {
-    margin: 10px;
+    margin: 15px 0 10px 40px;
     position: relative;
 }
 
 .header__city
 {
-    color: #a9a9a9;
     cursor: pointer;
+    position: relative;
 }
 
-.header__city-point
+.header__city::before
 {
+    content: '➤';
+    position: absolute;
     width: 20px;
     height: 20px;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
+    top: -4px;
+    left: -13px;
 }
 
 .header__options
@@ -65,7 +110,6 @@ body
 .mail-box__count
 {
     display: inline-block;
-    font-weight: bold;
 }
 
 /* Grid */
@@ -73,7 +117,7 @@ body
 .container
 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 140px 1fr 1fr 1fr;
     grid-gap: 10px;
     margin: 0 var(--side-margin);
     box-sizing: border-box;
@@ -87,10 +131,7 @@ body
 
 .logo
 {
-    background-image: url(logo.svg);
-    background-repeat: no-repeat;
     grid-row: 2 / span 3;
-    background-position: 121px -29px;
 }
 
 .search
@@ -106,38 +147,22 @@ body
 .column
 {
     height: 100%;
+    margin: 20px 0;
 }
 
 /* News */
-
-.block-name
-{
-    color: #1e90ff;
-    display: inline-block;
-    margin: 5px 0;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
 
 .news__place
 {
     color: #1e90ff;
     opacity: .6;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .news__date
 {
-    color: #a9a9a9;
     font-size: .85rem;
-}
-
-.list
-{
-    padding: 0;
-    margin: 0;
-    line-height: 1.9;
-    list-style: none;
 }
 
 .news__list
@@ -153,14 +178,8 @@ body
 
 .stock__rates
 {
-    font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-.stock__dynamic
-{
-    color: #a9a9a9;
 }
 
 /* Aside */
@@ -177,10 +196,16 @@ body
     object-fit: contain;
     width: auto;
     height: 120px;
-    margin-top: 10px;
+    margin: 10px 40px 0 0;
 }
 
-/* Search */
+/* Search, Logo */
+
+.logo__image
+{
+    object-fit: none;
+    object-position: 10px 5px;
+}
 
 .menu
 {
@@ -199,20 +224,55 @@ body
 .search__field
 {
     width: 88%;
-    line-height: 36px;
+    line-height: 37px;
     border: 2px solid #ffd700;
-    display: table-cell;
+    display: inline-block;
     vertical-align: top;
+    outline: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 10px;
 }
 
-.search__button
+.search-button
 {
     background: #ffd700;
-    width: 88px;
+    width: 90px;
     line-height: 36px;
-    display: table-cell;
+    display: inline-block;
     cursor: pointer;
-    border: 1px solid #ffd700;
+    border: 2px solid #ffd700;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: -10px;
+    outline: none;
+    position: relative;
+}
+
+.search-button::before
+{
+    content: '';
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    background: #fff;
+    transform: rotate(115deg);
+    transform-origin: right bottom;
+}
+
+.search-button::after
+{
+    content: '';
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    background: #fff;
+    transform: rotate(-115deg);
+    transform-origin: right top;
 }
 
 .search__example
@@ -220,9 +280,10 @@ body
     margin: 7px 0;
 }
 
-.search__example-text
+.search__example > span .light-text:hover
 {
-    color: #a9a9a9;
+    cursor: pointer;
+    color: #dc143c;
 }
 
 /* Ad */
@@ -231,8 +292,17 @@ body
 {
     object-fit: none;
     object-position: 0 -190px;
-    width: 700px;
+    width: 795px;
     height: 90px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* Column */
+
+.column > div
+{
+    margin: 20px 0;
 }
 
 /* Visited */
@@ -260,4 +330,131 @@ body
 {
     text-decoration: none;
     color: #1e90ff;
+}
+
+.joke__more::before
+{
+    content: '\21BB';
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* TV, Events */
+
+.block-line
+{
+    line-height: 1.9;
+}
+
+.block-line > span
+{
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.block-line > span:hover
+{
+    color: #dc143c;
+}
+
+.tv-button
+{
+    line-height: 26px;
+    width: 99px;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: linear-gradient(to right,#00a3fa,#716ef8);
+    cursor: pointer;
+    transform: scale(.88);
+    border-radius: 5px;
+}
+
+.tv-button:hover
+{
+    transform: scale(1);
+}
+
+/* Auto */
+
+.auto__news
+{
+    line-height: 1.2;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.auto__news::-webkit-scrollbar
+{
+    width: 0;
+}
+
+.auto__container
+{
+    position: relative;
+}
+
+.auto__container::before,
+.auto__container::after
+{
+    content: '';
+    width: 100%;
+    height: 25px;
+    position: absolute;
+}
+
+.auto__container::before
+{
+    top: 0;
+    background: linear-gradient(to bottom, #fff, transparent);
+}
+
+.auto__container::after
+{
+    bottom: 0;
+    background: linear-gradient(to top, #fff, transparent);
+}
+
+.auto__news > li
+{
+    margin-bottom: 12px;
+}
+
+/* Weather, Traffic */
+
+.weather__value,
+.traffic__rate
+{
+    font-size: 1.1rem;
+}
+
+.weather__icon,
+.traffic__icon
+{
+    width: 30px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.maps__items
+{
+    line-height: 1.9;
+}
+
+.maps__items > span
+{
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.maps__items > span:hover
+{
+    color: #dc143c;
+}
+
+.footer
+{
+    margin: 10px var(--side-margin);
 }

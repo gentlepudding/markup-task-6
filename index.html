@@ -7,22 +7,19 @@
 </head>
 <body>
     <header class="header">
-        <span class="header__city">
-            <span class="header__city-point">➤</span>
-            Екатеринбург
-        </span>
+        <span class="light-text header__city">Сочи</span>
         <span class="header__options">Настройка</span>
         <div class="mail-box">
             <span class="mail-box__log">login</span>
             <span class="mail-box__mail">Почта</span>
-            <span class="mail-box__count">138</span>
+            <span class="bold-text mail-box__count">138</span>
         </div>
     </header>
     <main class="container">
         <div class="news">
             <h2 class="block-name">Сейчас в СМИ</h2>
-            <span class="news__place">В Краснодарском крае</span>
-            <span class="news__date">21 ноября, вторник 14:05</span>
+            <span class="news__place">в Краснодарском крае</span>
+            <span class="light-text news__date">21 ноября, вторник 14:05</span>
             <ul class="list news__list">
                 <li>Школьник из ЯНАО рассказал в Бундестаге о «невинных солдатах вермахта</li>
                 <li>Задержанный в Минске гражданин Украины признался в шпионаже</li>
@@ -32,27 +29,29 @@
             </ul>
             <div>
                 <div class="stock">
-                    <span class="stock__rates">USD ЦБ</span>
+                    <span class="bold-text stock__rates">USD ЦБ</span>
                     <span class="stock__value">59,46</span>
-                    <span class="stock__dynamic">+ 0,19</span>
+                    <span class="light-text">+ 0,19</span>
                 </div>
                 <div class="stock">
-                    <span class="stock__rates">EUR ЦБ</span>
+                    <span class="bold-text stock__rates">EUR ЦБ</span>
                     <span class="stock__value">69,67</span>
                 </div>
                 <div class="stock">
-                    <span class="stock__rates">Нeфть</span>
+                    <span class="bold-text stock__rates">Нeфть</span>
                     <span class="stock__value">62,72</span>
-                    <span class="stock__dynamic">+ 0,95%</span>
+                    <span class="light-text">+ 0,95%</span>
                 </div>
             </div>
         </div>
         <div class="aside">
-            <img class="aside__image" src="fish.jpg" alt="fish">
+            <img class="aside__image" src="images/fish.jpg" alt="fish">
             <h2 class="block-name">Я в отпуске 🏝</h2>
             <div>Cдаю домашку в последний момент😿</div>
         </div>
-        <div class="logo"></div>
+        <div class="logo">
+            <img class="logo__image" src="icons-minified/logo.svg" alt="logo">
+        </div>
         <div class="search">
             <nav class="menu">
                 <span class="menu__item">Видео</span>
@@ -65,28 +64,27 @@
                 <span class="menu__item">ещё</span>
             </nav>
             <input type="search" id="search" class="search__field">
-            <label for="search"></label>
-            <button class="search__button">Найти</button>
+            <button class="search-button">Найти</button>
             <div class="search__example">
                 <span>Найдется всё. Например,
-                    <span class="search__example-text">как отцентрировать элемент по вертикали</span>
+                    <span class="light-text">как отцентрировать элемент по вертикали</span>
                 </span>
             </div>
         </div>
         <div class="add">
-            <img class="add__image" src="birds.jpg" alt="birds">
+            <img class="add__image" src="images/birds.jpg" alt="birds">
         </div>
         <div class="column">
             <div class="visited">
                 <h2 class="block-name">Посещаемое</h2>
                 <ul class="list">
-                    <li>Маркет — товары из Китая</li>
-                    <li>Авто.ру — Хёндай Туссан III</li>
-                    <li>Недвижимость — студии с ипотекой</li>
-                    <li>Работа — для студентов</li>
-                    <li>Деньги — коммунальные платежиs</li>
-                    <li>Музыка — без рекламы</li>
-                    <li>Видео — посмотреть фильм</li>
+                    <li><span class="bold-text">Маркет</span> — товары из Китая</li>
+                    <li><span class="bold-text">Авто.ру</span> — Хёндай Туссан III</li>
+                    <li><span class="bold-text">Недвижимость</span> — студии с ипотекой</li>
+                    <li><span class="bold-text">Работа</span> — для студентов</li>
+                    <li><span class="bold-text">Деньги</span> — коммунальные платежиs</li>
+                    <li><span class="bold-text">Музыка</span> — без рекламы</li>
+                    <li><span class="bold-text">Видео</span> — посмотреть фильм</li>
                 </ul>
             </div>
             <div class="joke">
@@ -105,75 +103,112 @@
         <div class="column">
             <div class="tv">
                 <h2 class="block-name">Телепрограмма</h2>
-                <div class="tv__line">
-                    <span class="c">23:35</span>
-                    <span class="c">Итоги дня</span>
-                    <span class="c">НТВ</span>
+                <button class="tv-button">ТВ онлайн</button>
+                <div class="block-line">
+                    <span>23:35</span>
+                    <span>Итоги дня</span>
+                    <span class="light-text">НТВ</span>
                 </div>
-                <div class="tv__line">
-                    <span class="c">23:55</span>
-                    <span class="c">Познер</span>
-                    <span class="c">Первый</span>
+                <div class="block-line">
+                    <span>23:55</span>
+                    <span>Познер</span>
+                    <span class="light-text">Первый</span>
                 </div>
-                <div class="tv__line">
-                    <span class="c">00:00</span>
-                    <span class="c">Известия</span>
-                    <span class="c">Пятый канал</span>
+                <div class="block-line">
+                    <span>00:00</span>
+                    <span>Известия</span>
+                    <span class="light-text">Пятый канал</span>
                 </div>
-                <div class="tv__line">
-                    <span class="c">00:20</span>
-                    <span class="c">6 кадров</span>
-                    <span class="c">Домашний</span>
+                <div class="block-line">
+                    <span>00:20</span>
+                    <span>6 кадров</span>
+                    <span class="light-text">Домашний</span>
                 </div>
-                <div class="tv__line">
-                    <span class="c">00:50</span>
-                    <span class="c">Дом-2. После заката</span>
-                    <span class="c">ТНТ</span>
+                <div class="block-line">
+                    <span>00:50</span>
+                    <span>Дом-2. После заката</span>
+                    <span class="light-text">ТНТ</span>
                 </div>
             </div>
             <div class="auto">
                 <h2 class="block-name">Автомобильные новости</h2>
-                <ul class="list">
-                    <li>Лучшим дамским авто 2017 года стал гибрид Hyundai Ioniq‍</li>
-                    <li>BMW пятой серии стал лучшим роскошным женским авто</li>
-                    <li>Ford Fiesta присвоили звание лучшего бюджетного женского автомобиля 2017</li>
-                    <li>Эксперты: Хакеры могут убить миллионы людей через взлом автомобилей</li>
-                    <li>Объем производства автомобилей в Петербурге вырос на 24%</li>
-                    <li>Представлен седан LADA Vesta Rally Sprint с независимой подвеской‍</li>
-                    <li>Uber создаст парк беспилотных автомобилей‍</li>
-                    <li>Hennessey рассекретила интерьер быстрейшего автомобиля в мире‍</li>
-                </ul>
+                <div class="auto__container">
+                    <ul class="list auto__news">
+                        <li>Лучшим дамским авто 2017 года стал гибрид Hyundai Ioniq‍</li>
+                        <li>BMW пятой серии стал лучшим роскошным женским авто</li>
+                        <li>Ford Fiesta присвоили звание лучшего бюджетного женского автомобиля 2017</li>
+                        <li>Эксперты: Хакеры могут убить миллионы людей через взлом автомобилей</li>
+                        <li>Объем производства автомобилей в Петербурге вырос на 24%</li>
+                        <li>Представлен седан LADA Vesta Rally Sprint с независимой подвеской‍</li>
+                        <li>Uber создаст парк беспилотных автомобилей‍</li>
+                        <li>Hennessey рассекретила интерьер быстрейшего автомобиля в мире‍</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="column">
             <div class="weather">
                 <h2 class="block-name">Погода</h2>
-                <span>+21 C</span>
-                <span>Вечер +15 С, ночь +10 С</span>
+                <img class="weather__icon" src="icons-minified/clouds.svg" alt="clouds">
+                <span class="weather__value">+7 &#8451;</span>
+                <div>Вечер +5 &#8451;, ночь +3 &#8451;</div>
             </div>
             <div class="traffic">
                 <h2 class="block-name">Пробки</h2>
-                <span>0 баллов</span>
-                <span>Отлично</span>
+                <img  class="traffic__icon" src="icons-minified/traffic.svg" alt="traffic-symbol">
+                <span class="traffic__rate">0 баллов</span>
+                <div>Отлично</div>
             </div>
             <div class="maps">
                 <h2 class="block-name">Карта Сочи</h2>
-                <span>Такси</span>
-                <span>Расписания</span>
-                <span>Авиа рейсы</span>
+                <div class="bold-text maps__items">
+                    <span>Такси</span>
+                    <span>Расписания</span>
+                </div>
+                <div class="bold-text maps__items">
+                    <span>Автобусы</span>
+                    <span>Авиарейсы</span>
+                </div>
+
             </div>
-            <div class="c">
+            <div class="events">
                 <h2 class="block-name">Афиша</h2>
-                <ul class="list">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div class="block-line">
+                    <span>Тайна Коко</span>
+                    <span class="light-text">премьера завтра</span>
+                </div>
+                <div class="block-line">
+                    <span>Лига справедливости</span>
+                    <span class="light-text">фантастика</span>
+                </div>
+                <div class="block-line">
+                    <span>Тор: Рагнарёк</span>
+                    <span class="light-text">фэнтези</span>
+                </div>
+                <div class="block-line">
+                    <span>Джиперс Криперс</span>
+                    <span class="light-text">ужасы</span>
+                </div>
+                <div class="block-line">
+                    <span>Анна Каренина</span>
+                    <span class="light-text">драма</span>
+                </div>
+                <div class="block-line bold-text">Концерты — Виктор Королев</div>
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <div>Icons made by
+            <a href="https://www.flaticon.com/authors/smashicons"
+            title="Smashicons">Smashicons</a>,
+            <a href="https://www.flaticon.com/authors/maxim-basinski"
+            title="Maxim Basinski">Maxim Basinski</a>
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </div>
+    </footer>
 </body>
 </html>
